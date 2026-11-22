@@ -1,0 +1,236 @@
+<!DOCTYPE html><html lang="en"><head><title>clj-in-th - Clojurians in Thailand</title><link href="assets/BKCC_discord.jpg" rel="icon" /><link href="https://fonts.googleapis.com" rel="preconnect" /><link crossorigin="crossorigin" href="https://fonts.gstatic.com" rel="preconnect" /><link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet" /><link href="assets/fontawesome/css/brands.css" rel="stylesheet" /><link href="assets/fontawesome/css/fontawesome.css" rel="stylesheet" /><style>:root {
+  --bone: #E7EEE9;
+  --sage: #93A79B;
+  --line: #25332C;
+  --dim: #63776C;
+  --euc: #e0b817;
+  --mono: "Fira Code", ui-monospace, Menlo ,monospace;
+  --sans: "Inter", "Segoe UI", sans-serif;
+  --surface: #141F19;
+  --ink: #55185D;
+  --euc-dim: #695918;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: radial-gradient(130% 80% at 20% -10%, #18291F 0%, var(--ink) 60%);
+  background-attachment: fixed;
+  color: var(--bone);
+  font-family: var(--sans);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+header {
+  padding: 72px 0 8px;
+  text-align: center;
+}
+
+.mark {
+  font-family: var(--mono);
+  font-size: clamp(2.6rem, 9vw, 4.6rem);
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  line-height: 1;
+  margin-bottom: 26px;
+}
+
+.mark .p {
+  color: var(--euc);
+  font-weight: 300;
+}
+
+.rule {
+  width: 120px;
+  height: 2px;
+  background: var(--euc);
+  margin: 0 auto 26px;
+  opacity: 0.9;
+}
+
+.tagline {
+  font-family: var(--mono);
+  font-size: .82rem;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: var(--sage);
+}
+
+.blurb {
+  margin: 34px auto 0;
+  max-width: 60ch;
+  color: var(--sage);
+  font-size: 1.05rem;
+}
+
+.blurb strong {
+  color: var(--bone);
+  font-weight: 500;
+}
+
+.about {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 32px;
+  margin: 56px 0 0;
+  border-top: 3px solid var(--euc);
+}
+
+.kicker {
+  font-family: var(--mono);
+  font-size: .7rem;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  color: var(--euc);
+  margin-bottom: 14px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -.02em;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+p {
+  color: var(--sage);
+  margin-bottom: 14px;
+}
+
+.cta {
+  padding: 11px 26px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: .94rem;
+  border-radius: 4px;
+  display: inline-block;
+  transition: transform .12s box-shadow .12s;
+  background: var(--euc);
+  color: #170b1a;
+}
+
+.cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px -6px rgba(193, 180, 98,.6);
+}
+
+section {
+  padding: 30px 0 0;
+}
+
+section p {
+  color: var(--mono);
+  max-width: 80ch;
+}
+
+section p strong {
+  color: var(--bone);
+  font-weight: 500;
+}
+
+section p + p {
+  margin-top: 14px;
+}
+
+h3 {
+  font-family: var(--mono);
+  font-size: .74rem;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  color: var(--euc);
+  margin-bottom: 18px;
+}
+
+code {
+  font-family: var(--mono);
+  font-size: .88em;
+  color: var(--euc);
+  background: rgba(98 193 147 0.09);
+  padding: 1px 6px;
+  border-radius: 3px;
+}
+
+.links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.links a {
+  display: block;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 18px 20px;
+  text-decoration: none;
+  color: var(--bone);
+  transition: border-color .15s, transform .12s;
+}
+
+.links a:hover {
+  border-color: var(--euc);
+  transform: translateY(-2px);
+}
+
+.links .lt {
+  font-weight: 600;
+  font-size: .98rem;
+  margin-bottom: 3px;
+}
+
+.links .ld {
+  font-size: .84rem;
+  color: var(--dim);
+}
+
+footer {
+  gap: 10px 26px;
+  justify-content: center;
+  font-family: var(--mono);
+  padding: 30px 0 60px;
+  margin-top: 86px;
+  border-top: 1px solid var(--line);
+  flex-wrap: wrap;
+  font-size: .76rem;
+  display: flex;
+  color: var(--dim);
+}
+
+footer a {
+  color: var(--sage);
+}
+
+a {
+  color: var(--euc);
+}</style><meta content="Homepage of Clojurians in Thailand" name="description" /><meta content="https://clj-in-th.github.io" property="og:url" /><meta content="#0D1411" name="theme-color" /></head><body><div class="wrap"><header><div class="mark"><span class="p">(</span>clj-in-th<span class="p">)</span></div><div class="rule"></div><div class="tagline">The Home of the Clojure Community in Thailand</div><p class="blurb"><image src="assets/BKCC_discord.jpg" style="max-width:66%;"></image></p></header><div class="about"><section><h3>Who is this for?</h3><p>Anyone who is interested in Clojure or Functional Programming is welcome regardless of experience
+          or professional pedigree. Anyone who cares about quality and craftsmanship. clj-in-th is just as 
+          much for the newcomer to the language as it is for Clojure engineers in Thailand to have a place to
+          socialise.</p><h3>What do you do?</h3><p>We currently meet monthly, either in a video call, or in person when circumstances permit. The meetings 
+                serve as a platform both for hosting speakers, and to provide a space for community-led projects for
+                anyone interested in developing their skills in Clojure, whether they are completely unfamiliar with
+                it or have been building enterprise Clojure for years. 
+                The community is also intended to facilitate local meetups and impropmptu events amongst community members.</p><h3>How do I join?</h3><p>Simply drop into our Discord Server linked below to say &quot;Hello&quot;!</p><h3>What is Clojure?</h3><p>Clojure is a modern functional lisp dialect targeting the JVM, Javascript, and .NET runtimes, 
+           can be compiled to native binaries via GraalVM, C++, or Chez Scheme, as well as being able to interoperate with python libraries.
+           Additionally Clojure can be used as a terminal scripting language via Babashka. 
+           It provides an interactive developer experience, allowing dynamic reloading of code at runtime.
+           Combined with the ability to manipulate the structure of the code directly and evaluate it in the editor
+           via integrated REPL tooling, this enables an unparelled level of transparency in the construction and examination of complex systems.</p><h3>Why Functional Programming?</h3><p>A functional approach to software design enables simpler and more composable architectures. Software can be conceptually
+           more ergonomic to build and use without compromising computational efficiency.</p></section></div><section><h3>Community Links<div class="links"><a href="https://discord.gg/GSd42VbQdg"><div class="lt"><i class="fa-brands fa-discord fa-lg" style="padding-right:1.5em;"></i>Discord</div><div class="ld">Community Hangout and Virtual Meeting room.</div></a><a href="https://github.com/clj-in-th"><div class="lt"><i class="fa-brands fa-github fa-lg" style="padding-right:1.5em;"></i>Github</div><div class="ld">Source code for this site and community repositories.</div></a><a href="https://clojurians.slack.com/archives/CCKRX8GKT"><div class="lt"><i class="fa-brands fa-slack fa-lg" style="padding-right:1.5em;"></i>Slack</div><div class="ld" style="overflow-wrap:break-word;">clojurians.slack.com#clojure-thailand</div></a><a href=""><div class="lt">Meeting Archive</div><div class="ld">Under Construction</div></a></div></h3></section></div></body></html>
